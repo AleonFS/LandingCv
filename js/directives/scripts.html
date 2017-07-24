@@ -1,0 +1,9 @@
+<!--Controllers-->
+        <!--<p ng-repeat="directive in config.route.directives">{{directive.url}}</p>-->
+<script type="text/javascript" ng-repeat="controller in config.route.controllers" src="{{controller.url}}"></script>
+<!--Modules-->
+<script type="text/javascript" ng-repeat="module in config.modules" src="{{config.module.url}}"></script>
+<!--Directives-->
+<script type="text/javascript" ng-repeat="directive in config.directives" src="{{donfig.directive.url}}"></script>
+<!--Services-->
+<script type="text/javascript" ng-repeat="service in config.services" src="{{config.service.url}}"></script>

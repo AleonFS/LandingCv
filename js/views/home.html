@@ -1,0 +1,76 @@
+<div id="sticky-menu" hl-sticky="">
+    <div ng-click="langToogler()" class="pointer toogleLang" ng-hide="toogleLang">
+        <i class="fa fa-language fa-2x" id="step2"></i>
+    </div>
+    <div  ng-show="toogleLang" class="flags flex justify-arround" id="step2">
+        <button ng-repeat="lang in languages" ng-click="changeLang(lang.locale)" class="pointer {{lang.locale}}">{{lang.name}}</button>
+    </div>
+    <div ng-show="toogleLang" class="btn-close" >
+        <i ng-click="langToogler()" class="fa fa-close pointer"></i>
+    </div>
+    <!--<div class="fb-share-button" data-href="http://aleon.hol.es/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faleon.hol.es%2F&amp;src=sdkpreparse">Compartir</a></div>-->
+    <div id="help" ng-intro-options="IntroOptions" ng-intro-method="CallMe">
+        <i  class="fa fa-question-circle pointer" ng-click="runIntro();"></i>
+    </div>
+</div>
+<article id="home">
+    <div class="maps" ng-show="mapShow">
+        <div id="map"></div>
+    </div>
+
+    <div class="flex justify-between center" id="datos">
+        <div id="re-header">
+            <h1>{{'Alejandro León'}}</h1>
+            <h2>{{'FullStack UI & UX Designer'}}</h2>
+        </div>
+        <div class="text-right">
+            <a href="mailto:aleon.fullstack@gmail.com">aleon.fullstack@gmail.com <i class="fa fa-paper-plane" aria-hidden="true"></i></a><br/>
+            <a href="tel:+34696238640">(+34) 696 23 86 40 <i class="fa fa-volume-control-phone" aria-hidden="true"></i></a><br/>
+            <a href="" ng-click="initMap()">Madrid 28047, Spain <i class="fa fa-map-o" aria-hidden="true"></i></a><br/>
+            <a href="https://es.linkedin.com/in/aleonstack" target="_blank">https://es.linkedin.com/in/aleonstack <i class="fa fa-linkedin-square" aria-hidden="true"></i></a><br/>
+        </div>
+    </div>
+    <div class="flex column" id="skills">
+        <h1><i class="fa fa-bar-chart" aria-hidden="true"></i> {{'Skills'}}</h1>
+        <hr/>
+        <div class="flex justify-arround wrap">
+            <div ng-repeat="block in blocks" class="flex column block">
+                <div class="flex center">
+                    <div class="icon {{block.icon}}"></div>
+                    <h2>{{block.name[lang]}}
+                    </h2>
+                </div>
+                <p>
+                    {{block.text[lang]}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flex column" id="employment">
+        <h1><i class="fa fa-briefcase" aria-hidden="true"></i> {{'Experiencia'|translate}}</h1>
+        <hr/>
+        <div class="flex column">
+            <div ng-repeat="block in experience" class="flex column">
+                <h1>{{block.name}}</h1>
+                <div class="flex justify-between center">
+                    <h2>{{block.where}}</h2>
+                    <pre>{{block.date}}</pre>
+                </div>
+                <div ng-bind-html="block.text[lang]"></div>
+            </div>
+        </div>
+    </div><div class="flex column" id="education">
+        <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> {{'Formación'|translate}}</h1>
+        <hr/>
+        <div class="flex column">
+            <div ng-repeat="block in academic" class="flex column">
+                <h1>{{block.name[lang]}}</h1>
+                <div class="flex justify-between center">
+                    <h2>{{block.where}}</h2>
+                    <pre>{{block.date}}</pre>
+                </div>
+                <div ng-bind-html="block.text[lang]"></div>
+            </div>
+        </div>
+    </div>
+</article>

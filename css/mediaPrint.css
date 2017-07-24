@@ -1,0 +1,118 @@
+/*Impresión*/
+@media print {
+    body{background: none;}
+    p, article *{
+        font-family: "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    }
+    .ff-goodnight{
+        /*font-family: 'Righteous',sans-serif;*/
+        /*margin-left: inherit;*/
+    }
+    video,#videoMasc,#sticky-menu,header .fa-stop-circle,header .fa-play-circle,.maps,#help .fa-question-circle{
+        display:none
+    }
+    header{
+        background: #3E497E;
+        background: radial-gradient(circle, #3E497E 65%, #1E1E1C 122% );
+        /*height:initial;*/
+    }
+    header h1 {
+        font-size: 30pt;
+    }
+    header h2 {
+        margin: 0;
+    }
+    detail{
+        display: inherit;
+    }
+    header detail:last-child{
+        background: url(../img/H_r.png)no-repeat;
+        background-size: 100% 100%;
+    }
+    detail{
+        animation:none;
+        position: relative;
+        bottom: -3vw;
+        background: url(../img/H_l.png)no-repeat;
+        background-size: 100% 100%;
+        height: 17vw;
+        width: 26.7vw;
+        z-index: 1;
+    }
+
+    .block{
+        max-width: 20%;
+    }
+    .block h2{
+        font-size: 12pt;
+    }
+    #datos h1, #skills h1, #employment h1, #education h1 {
+        font-size: 12pt;
+    }
+    .block p{
+        font-size: 8pt;
+    }
+    #employment p,#education p{
+        font-size: 9pt;
+    }
+    article{
+        width: 98vw;
+        margin: 0.5vw auto;
+    }
+    .icon {
+        min-width: 3vw;
+        min-height: 3vw;
+        border-radius: 3vw;
+        margin-right: 0.5vw;
+    }
+
+    #datos{
+        display: flex;
+        margin-top: 2%;
+    }
+    #re-header {
+        display: initial;
+    }
+    #datos div {
+        width: inherit;
+    }
+    #datos .text-right {
+        text-align: right;
+    }
+    #datos a {
+
+        font-size: 10pt;
+    }
+    #datos h1, #datos h2{
+        font-size: 12pt;
+    }
+    #employment, #education {
+        width: 48%;
+
+        float: left;
+    }
+    #employment{
+        margin-right: 2%;
+    }
+    #education{
+        margin-left: 2%;
+    }
+    #employment h1, #education h1 {
+        margin-bottom: 0;
+        font-size:10pt;
+    }
+    #employment>h1, #education>h1{
+        font-size:13pt;
+    }
+    #employment h2, #education h2 {
+        margin-bottom: 0;
+        font-size:10pt;
+    }
+    #employment pre, #education pre {
+        margin: 0;
+        font-size: 10pt;
+    }
+    #skills {
+        margin-bottom: 2%;
+    }
+}

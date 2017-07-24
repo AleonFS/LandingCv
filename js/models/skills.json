@@ -1,0 +1,10 @@
+[
+    {
+        "icon":"js",
+        "name":{
+            "es":"Javascript / NoSQL",
+            "en":"Javascript / NoSQL"
+        },
+        "text":"JavaScript, Node.js, express, JSON, angularJS, jQuery, OOP, MVC/MV*, Mongodb, AJAX, JSON, REST, APIs, speed & size optimization."
+    }
+]

@@ -1,0 +1,11 @@
+<form novalidate>
+    Nombre: <input type="text" ng-model="basicInfo.name" /><br />
+    E-mail: <input type="email" ng-model="basicInfo.email" /><br />
+    Teléfono: <input type="tel" ng-model="basicInfo.phone" /><br />
+    Dirección: <input type="text" ng-model="basicInfo.address" /><br />
+    Fecha Nacimiento: <input type="text" ng-model="basicInfo.birth" /><br />
+    DNI/NIE: <input type="text" ng-model="basicInfo.dni" /><br />
+    <input type="submit" ng-click="update(basicInfo)" value="Guardar" />
+    <input type="submit" ng-click="load()" value="Cargar" />
+</form>
+<pre>{{basicInfo | json}}</pre>

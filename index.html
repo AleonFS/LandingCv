@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html ng-app="cvWeb">
+<head>
+    <meta http-equiv="Content-Language" content="es,en">
+    <meta charset="UTF-8">
+    <title>FullStack Designer | Alejandro León</title>
+    <meta name="description" content="Descubre el Curriculum de Full Stack Designer e investiga hasta el código!"/>
+    <meta name=”robots” content=”Index,Follow”>
+    <meta name=”revisit-after” content=”15”>
+    <meta name=”author” content=”Alejandr_León”>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Facebook OG:-->
+    <meta property="fb:app_id" content="144752244653" />
+    <meta property="og:title" content="Alejandro León - FullStack Designer" />
+    <meta property="og:description" content="CV Web & PDF Recruiter Friendly" />
+    <meta property="og:image" content="http://aleon.hol.es/img/shareImgv2.jpg" />
+    <meta property="og:url" content="http://aleon.hol.es" />
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--Fin Favicons-->
+
+    <script type="text/javascript" src="js/libs/angular.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-animate.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+
+    <script type="text/javascript" src="js/libs/intro.js"></script>
+    <script type="text/javascript" src="js/modules/angular-intro.min.js"></script>
+
+    <!--Controllers-->
+    <script type="text/javascript" src="js/controllers/HomeController.js"></script>
+    <!--Directives-->
+    <script src="js/directives/responsiveOpt.js"></script>
+    <!--<script src="js/directives/metaTags.js"></script>-->
+    <!--Services-->
+    <script type="text/javascript" src="js/services/curriculum-service.js"></script>
+    <!--Librerías multiidioma-->
+    <script type="text/javascript" src="js/libs/angular-translate.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-translate-storage-cookie.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-translate-loader-static-files.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-translate-loader-url.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-translate-storage-local.min.js"></script>
+    <script type="text/javascript" src="js/libs/tmhDynamicLocale.min.js"></script>
+    <!--Módulos-->
+    <script type="text/javascript" src="js/libs/angular-sticky.js"></script>
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-desktop.css">
+    <link rel="stylesheet" type="text/css" href="css/mediaPrint.css">
+    <link rel="stylesheet" type="text/css" href="css/introjs.css"/>
+    <!--<link rel="stylesheet" href="/maps/documentation/javascript/demos/demos.css">-->
+</head>
+<body>
+<header class="flex justify-arround" responsive-option ng-class="{'stop':(!renderVideo)}">
+    <div id="videoMasc"  ng-init="renderVideo" ng-if="renderVideo">
+        <video autoplay muted loop id="bgvid">
+            <source src="vid/humo_azul.webm" type="video/webm">
+            <source src="vid/humo_azul.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <detail></detail>
+    <div style="z-index:inherit;">
+        <h1 >
+            <a href="/">alejandro león</a>
+        </h1>
+        <h2>{{'Full Stack'}}&nbsp;<span class="ff-goodnight">{{'Designer'}}</span></h2>
+        <hr/>
+        <h3>{{'Curriculum'}}&nbsp;{{'Web'}}&nbsp;&&nbsp;"<a href="generated/FullStack_Designer_Alejandro_León.pdf" target="_blank" style="text-decoration: underline">PDF</a>"&nbsp;{{'Recruiter Friendly'}}</h3>
+        <i id="step1" class="fa pointer" ng-class="(renderVideo)?'fa-stop-circle':'fa-play-circle'" aria-hidden="true"  ng-click="isrenderVideo()"></i>
+    </div>
+    <detail></detail>
+</header>
+<section>
+    <ui-view ng-intro-options="IntroOptions" ng-intro-method="CallMe"
+             ng-intro-oncomplete="CompletedEvent" ng-intro-onexit="ExitEvent"
+             ng-intro-onchange="ChangeEvent" ng-intro-onbeforechange="BeforeChangeEvent"
+             ng-intro-onafterchange="AfterChangeEvent"
+             ng-intro-autostart="ShouldAutoStart"></ui-view>
+</section>
+
+<script type="text/javascript" src="js/config/LangProvider.js"></script>
+<script>
+    //SDK Facebook
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '144752244653',
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+</html>

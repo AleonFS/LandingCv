@@ -1,0 +1,25 @@
+<section>
+    <div>
+        <h1>Información Básica</h1>
+        <p>Nombre: {{basicInfo.name}}</p>
+        <p>Teléfono: {{basicInfo.phone}}</p>
+    </div>
+    <div>
+        <h1>Fotografía</h1>
+        <p>{{awardsTags[0]}}<br>Por : {{awardsValue[awardsTags[0]].entity}}</p>
+    </div>
+    <div>
+        <h1>Formación</h1>
+        <p>{{academicTags[0]}} : {{academicValue[academicTags[0]].entity}}</p>
+    </div>
+    <div>
+        <h1>Experiencia</h1>
+        <h2>{{expTags[0]}}</h2>
+        <p>{{expSubTags[0]}} : {{expValue[expTags[0]][expSubTags[0]].project}}</p>
+    </div>
+    <div>
+        <h1>Habilidades</h1>
+        <h2>{{itTags[0]}}</h2>
+        <p>{{itSubTags[0]}} : {{itValue[itTags[0]][itSubTags[0]].level}}</p>
+    </div>
+</section>

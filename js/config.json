@@ -1,0 +1,35 @@
+{
+    "directivesRoute": "./js/directives/",
+    "controllersRoute": "./js/controllers/",
+    "servicesRoute": "./js/services/",
+    "directives": [
+        {
+            "module": "ui",
+            "url": "./js/directives/appInfo.js"
+        }
+    ],
+    "controllers": [
+        {
+            "module": "ui",
+            "url": "./js/controllers/mainMenu.js"
+        },
+        {
+            "module": "ui",
+            "url": "./js/controllers/home.js"
+        },
+        {
+            "module": "cv",
+            "url": "./js/controllers/cvData.js"
+        },
+        {
+            "module": "cv",
+            "url": "./js/controllers/cvEditor"
+        }
+    ],
+    "services": [
+        {
+            "module": "cv",
+            "url": "./js/services/curriculum-service.js"
+        }
+    ]
+}

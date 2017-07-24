@@ -1,0 +1,36 @@
+{
+  "name": "alweb",
+  "authors": [
+    "Aleon <aleon.fullstack@gmail.com> (http://aleon.hol.es)"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "angular-translate": "2.8.1",
+    "angular-translate-loader-static-files": "2.15.1",
+    "angular-translate-loader-url": "2.15.1",
+    "angular-translate-storage-cookie": "2.15.1",
+    "angular-translate-storage-local": "2.15.1",
+    "angular-dynamic-locale": "0.1.32",
+    "angular-animate": "1.5.9",
+    "angular-sanitize": "1.5.9",
+    "angular-sticky-plugin": "0.3.0",
+    "intro.js": "2.4.0",
+    "angular-ui-router": "1.x"
+  },
+  "resolutions": {
+    "angular": "1.5.9",
+    "angular-translate": "~2.15.1"
+  }
+}
